@@ -17,7 +17,7 @@ npm install
 php artisan config:cache
 ```
 
-3. Para criar o banco de dados e registros de teste:
+3. Para criar o banco de dados:
 ```
 php artisan migrate
 ```
