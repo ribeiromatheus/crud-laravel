@@ -18,7 +18,7 @@ class CreateStudentsTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->unsignedBigInteger('ra_id');
-            $table->unsignedBigInteger('team_id');
+            $table->unsignedBigInteger('team_id')->nullable();
 
             $table->foreign('ra_id')
                 ->references('id')
@@ -27,7 +27,8 @@ class CreateStudentsTable extends Migration
 
             $table->foreign('team_id')
                 ->references('id')
-                ->on('teams');
+                ->on('teams')
+                ->nullOnDelete();
 
             $table->timestamps();
         });

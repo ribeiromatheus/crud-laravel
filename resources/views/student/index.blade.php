@@ -23,7 +23,7 @@
       <td>{{ $student['name'] }}</td>
       <td>{{ $student['email'] }}</td>
       <td>{{ $student['ra']['ra'] }}</td>
-      <td>{{ $student['team']['name'] }}</td>
+      <td>{{ $student['team']['name'] ?? "" }}</td>
       <td>
         <a href="{{ route('student.edit', $student['id']) }}" class="btn btn-warning">Editar</a>
       </td>
